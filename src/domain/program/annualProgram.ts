@@ -37,6 +37,35 @@ const rest = (minSeconds: number, maxSeconds: number): RestTarget => ({
       : `${minSeconds}-${maxSeconds} sec rest`,
 });
 
+const demoByExerciseName: Record<string, string> = {
+  Clean: "https://exrx.net/WeightExercises/Kettlebell/KBClean",
+  "Strict press": "https://exrx.net/WeightExercises/Kettlebell/KBPress",
+  "Front squat": "https://exrx.net/WeightExercises/Kettlebell/KBFrontSquat",
+  "Bent-over row": "https://na.physitrack.com/home-exercise-video/kettlebell-bent-over-row",
+  "2-hand swing": "https://exrx.net/WeightExercises/Kettlebell/KBSwing",
+  "Push press": "https://www.functionalmovement.com/Exercises/270/kb_push_press",
+  "Reverse lunge in rack": "https://www.gbpersonaltraining.com/kettlebell-reverse-lunge-exercise/",
+  "Reverse lunge": "https://www.gbpersonaltraining.com/kettlebell-reverse-lunge-exercise/",
+  "High pull or snatch":
+    "https://www.youtube.com/results?search_query=kettlebell+high+pull+or+snatch+tutorial",
+  "Front-rack march": "https://www.youtube.com/results?search_query=kettlebell+front+rack+march+tutorial",
+  Row: "https://na.physitrack.com/home-exercise-video/kettlebell-bent-over-row",
+  "Suitcase carry": "https://us.physitrack.com/home-exercise-video/suitcase-carry-with-kettlebell",
+  "Goblet march": "https://www.skimble.com/exercises/109226-kettlebell-goblet-march-how-to-do-exercise",
+};
+
+const withExerciseDemoLinks = (template: WorkoutTemplate): WorkoutTemplate => ({
+  ...template,
+  exercises: template.exercises.map((exercise) => ({
+    ...exercise,
+    demoUrl: exercise.demoUrl ?? demoByExerciseName[exercise.name],
+  })),
+  finishers: template.finishers?.map((finisher) => ({
+    ...finisher,
+    demoUrl: finisher.demoUrl ?? demoByExerciseName[finisher.name],
+  })),
+});
+
 const muscleTemplates: Record<WorkoutDayNumber, WorkoutTemplate> = {
   1: {
     dayNumber: 1,
@@ -362,12 +391,13 @@ const buildSession = (
   scheduleDay: ScheduleDay,
 ): WorkoutSession => {
   const phaseInfo = getPhaseInfo(weekNumber);
-  const template =
+  const baseTemplate =
     phaseInfo.block === "muscle-gain"
       ? muscleTemplates[dayNumber]
       : phaseInfo.block === "fat-loss"
         ? fatLossTemplates[dayNumber]
         : resetTemplates[dayNumber];
+  const template = withExerciseDemoLinks(baseTemplate);
 
   const prescription: {
     roundTarget: RoundTarget;

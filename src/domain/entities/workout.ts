@@ -7,12 +7,14 @@ export type ScheduleDay = "Mon" | "Tue" | "Thu" | "Sat";
 export interface Exercise {
   name: string;
   prescription: string;
+  demoUrl?: string;
   note?: string;
 }
 
 export interface Finisher {
   name: string;
   prescription: string;
+  demoUrl?: string;
 }
 
 export interface RoundTarget {

@@ -42,10 +42,23 @@ export const WorkoutPanel = ({ session }: WorkoutPanelProps) => (
       {session.template.exercises.map((exercise) => (
         <li key={`${exercise.name}-${exercise.prescription}`} className="exercise-item">
           <div>
-            <strong>{exercise.name}</strong>
+            {exercise.demoUrl ? (
+              <a
+                className="exercise-link"
+                href={exercise.demoUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${exercise.name} exercise demo`}
+              >
+                <strong>{exercise.name}</strong>
+                <span>Demo</span>
+              </a>
+            ) : (
+              <strong>{exercise.name}</strong>
+            )}
             {exercise.note ? <p>{exercise.note}</p> : null}
           </div>
-          <span>{exercise.prescription}</span>
+          <span className="exercise-prescription">{exercise.prescription}</span>
         </li>
       ))}
     </ol>
@@ -57,7 +70,20 @@ export const WorkoutPanel = ({ session }: WorkoutPanelProps) => (
         </p>
         {session.template.finishers.map((finisher) => (
           <p key={`${finisher.name}-${finisher.prescription}`}>
-            <strong>{finisher.name}</strong> · {finisher.prescription}
+            {finisher.demoUrl ? (
+              <a
+                className="finisher-link"
+                href={finisher.demoUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${finisher.name} exercise demo`}
+              >
+                <strong>{finisher.name}</strong>
+              </a>
+            ) : (
+              <strong>{finisher.name}</strong>
+            )}{" "}
+            · {finisher.prescription}
           </p>
         ))}
       </div>

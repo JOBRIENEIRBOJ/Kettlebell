@@ -134,6 +134,10 @@ textarea {
   font: inherit;
 }
 
+a {
+  color: inherit;
+}
+
 button {
   border: 0;
   cursor: pointer;
@@ -443,14 +447,43 @@ p {
 }
 
 .exercise-item strong,
-.exercise-item span {
+.exercise-prescription {
   font-size: 1.02rem;
 }
 
-.exercise-item span {
+.exercise-prescription {
   flex: 0 0 auto;
   color: var(--green);
   font-weight: 900;
+}
+
+.exercise-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+}
+
+.exercise-link span {
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft-card);
+  color: var(--green);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.exercise-link:hover strong,
+.finisher-link:hover strong {
+  color: var(--green);
+}
+
+.finisher-link {
+  text-decoration-color: color-mix(in srgb, var(--green), transparent 45%);
+  text-underline-offset: 0.22rem;
 }
 
 .exercise-item p {
