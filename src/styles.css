@@ -5,108 +5,130 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  color: #1f241f;
-  background: #f6f3ed;
+  color: #14202d;
+  background: #f7fafc;
   color-scheme: light;
-  --cream: #f6f3ed;
-  --ink: #1f241f;
-  --muted: #71766d;
-  --card: rgba(255, 255, 255, 0.78);
-  --line: rgba(31, 36, 31, 0.12);
-  --green: #466c4a;
-  --mint: #cfe7d0;
-  --orange: #e89662;
-  --gold: #f2d28f;
-  --shadow: 0 24px 70px rgba(54, 50, 42, 0.15);
+  --cream: #f7fafc;
+  --ink: #14202d;
+  --muted: #5e6b79;
+  --card: rgba(255, 255, 255, 0.9);
+  --line: rgba(20, 32, 45, 0.08);
+  --green: #2563eb;
+  --mint: #7aa8ff;
+  --orange: #ff6b81;
+  --gold: #dbe8ff;
+  --shadow: 0 24px 70px rgba(20, 32, 45, 0.12);
   --body-bg:
-    radial-gradient(circle at 20% 0%, rgba(242, 210, 143, 0.48), transparent 34rem),
-    radial-gradient(circle at 90% 10%, rgba(207, 231, 208, 0.72), transparent 28rem),
-    linear-gradient(145deg, #fbf8f1 0%, #eee8dd 100%);
-  --soft-card: rgba(255, 255, 255, 0.62);
-  --field-bg: rgba(255, 255, 255, 0.82);
-  --ghost-bg: rgba(255, 255, 255, 0.6);
-  --history-bg: rgba(255, 255, 255, 0.56);
+    radial-gradient(circle at top, rgba(80, 133, 255, 0.18), transparent 38%),
+    linear-gradient(180deg, #f7fafc 0%, #edf2f7 100%);
+  --soft-card: rgba(255, 255, 255, 0.76);
+  --field-bg: rgba(255, 255, 255, 0.92);
+  --ghost-bg: rgba(255, 255, 255, 0.72);
+  --history-bg: rgba(255, 255, 255, 0.72);
   --ring-center: #ffffff;
-  --ring-track: rgba(70, 108, 74, 0.16);
+  --ring-track: rgba(37, 99, 235, 0.18);
+  --primary-bg: #2563eb;
+  --primary-action-contrast: #ffffff;
   --primary-contrast: #ffffff;
-  --primary-shadow: rgba(31, 36, 31, 0.24);
-  --workout-glow: rgba(242, 210, 143, 0.44);
-  --fat-loss-glow: rgba(232, 150, 98, 0.34);
-  --reset-glow: rgba(207, 231, 208, 0.74);
-  --rule-text: #6c5630;
-  --test-text: #7f4a26;
-  --segment-bg: rgba(255, 255, 255, 0.58);
-  --segment-active: #1f241f;
+  --primary-shadow: rgba(37, 99, 235, 0.22);
+  --workout-glow: rgba(80, 133, 255, 0.28);
+  --fat-loss-glow: rgba(37, 99, 235, 0.2);
+  --reset-glow: rgba(122, 168, 255, 0.34);
+  --rule-text: #1d4ed8;
+  --test-text: #1e40af;
+  --segment-bg: rgba(255, 255, 255, 0.74);
+  --segment-active: #2563eb;
+  --segment-contrast: #ffffff;
+  --workout-detail: #14202d;
+  --instruction-text: #14202d;
+  --demo-pill-bg: rgba(94, 107, 121, 0.1);
+  --demo-pill-text: #475569;
+  --exercise-link-hover: #14202d;
 }
 
 :root[data-theme="dark"] {
-  color: #f8f2e8;
-  background: #111512;
+  color: #f3f5f8;
+  background: #10131a;
   color-scheme: dark;
-  --cream: #111512;
-  --ink: #f8f2e8;
-  --muted: #a8b3a5;
-  --card: rgba(24, 29, 26, 0.78);
-  --line: rgba(255, 255, 255, 0.13);
-  --green: #9fd2a7;
-  --mint: #1f4b37;
-  --orange: #f3a56d;
-  --gold: #f0ca78;
+  --cream: #10131a;
+  --ink: #f3f5f8;
+  --muted: #a4adba;
+  --card: rgba(17, 21, 29, 0.84);
+  --line: rgba(255, 255, 255, 0.08);
+  --green: #7bdff6;
+  --mint: #45b7d1;
+  --orange: #ff9baa;
+  --gold: #fcd34d;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
   --body-bg:
-    radial-gradient(circle at 20% 0%, rgba(240, 202, 120, 0.14), transparent 34rem),
-    radial-gradient(circle at 90% 10%, rgba(79, 171, 132, 0.22), transparent 28rem),
-    linear-gradient(145deg, #151a16 0%, #090c0a 100%);
-  --soft-card: rgba(255, 255, 255, 0.06);
+    radial-gradient(circle at top, rgba(67, 97, 238, 0.18), transparent 42%),
+    linear-gradient(180deg, #10131a 0%, #090b10 100%);
+  --soft-card: rgba(255, 255, 255, 0.07);
   --field-bg: rgba(255, 255, 255, 0.08);
   --ghost-bg: rgba(255, 255, 255, 0.08);
   --history-bg: rgba(255, 255, 255, 0.06);
-  --ring-center: #181d1a;
-  --ring-track: rgba(159, 210, 167, 0.18);
-  --primary-contrast: #111512;
+  --ring-center: #11151d;
+  --ring-track: rgba(123, 223, 246, 0.18);
+  --primary-bg: #7bdff6;
+  --primary-action-contrast: #081018;
+  --primary-contrast: #081018;
   --primary-shadow: rgba(0, 0, 0, 0.36);
-  --workout-glow: rgba(240, 202, 120, 0.16);
-  --fat-loss-glow: rgba(243, 165, 109, 0.16);
-  --reset-glow: rgba(159, 210, 167, 0.18);
-  --rule-text: #f0ca78;
-  --test-text: #f3a56d;
+  --workout-glow: rgba(123, 223, 246, 0.16);
+  --fat-loss-glow: rgba(69, 183, 209, 0.16);
+  --reset-glow: rgba(123, 223, 246, 0.18);
+  --rule-text: #7bdff6;
+  --test-text: #ff9baa;
   --segment-bg: rgba(255, 255, 255, 0.08);
-  --segment-active: #f8f2e8;
+  --segment-active: #7bdff6;
+  --segment-contrast: #081018;
+  --workout-detail: #f3f5f8;
+  --instruction-text: #f3f5f8;
+  --demo-pill-bg: rgba(164, 173, 186, 0.14);
+  --demo-pill-text: #a4adba;
+  --exercise-link-hover: #f3f5f8;
 }
 
 :root[data-theme="pink-teal"] {
   color: #202124;
-  background: #fff0f6;
+  background: #fff0f5;
   color-scheme: light;
-  --cream: #fff0f6;
+  --cream: #fff0f5;
   --ink: #202124;
-  --muted: #746170;
+  --muted: #77516b;
   --card: rgba(255, 255, 255, 0.78);
-  --line: rgba(91, 49, 85, 0.14);
-  --green: #088f8f;
-  --mint: #b9f2ec;
-  --orange: #ff7aa8;
-  --gold: #ffd7a8;
-  --shadow: 0 24px 70px rgba(117, 49, 93, 0.18);
+  --line: rgba(255, 20, 147, 0.18);
+  --green: #00aebd;
+  --mint: #40e0d0;
+  --orange: #ff1493;
+  --gold: #ffc1e3;
+  --shadow: 0 24px 70px rgba(255, 20, 147, 0.2);
   --body-bg:
-    radial-gradient(circle at 18% 0%, rgba(255, 122, 168, 0.44), transparent 30rem),
-    radial-gradient(circle at 92% 12%, rgba(104, 224, 213, 0.62), transparent 30rem),
-    linear-gradient(145deg, #fff8fb 0%, #e7fbf7 100%);
+    radial-gradient(circle at 18% 0%, rgba(255, 105, 180, 0.48), transparent 30rem),
+    radial-gradient(circle at 92% 12%, rgba(64, 224, 208, 0.68), transparent 30rem),
+    linear-gradient(135deg, #ff69b4 0%, #40e0d0 50%, #ff1493 100%);
   --soft-card: rgba(255, 255, 255, 0.64);
   --field-bg: rgba(255, 255, 255, 0.84);
   --ghost-bg: rgba(255, 255, 255, 0.62);
   --history-bg: rgba(255, 255, 255, 0.58);
   --ring-center: #ffffff;
-  --ring-track: rgba(8, 143, 143, 0.18);
+  --ring-track: rgba(64, 224, 208, 0.22);
+  --primary-bg: #40e0d0;
+  --primary-action-contrast: #063b3b;
   --primary-contrast: #ffffff;
-  --primary-shadow: rgba(8, 143, 143, 0.24);
-  --workout-glow: rgba(255, 122, 168, 0.34);
-  --fat-loss-glow: rgba(255, 177, 109, 0.36);
-  --reset-glow: rgba(104, 224, 213, 0.5);
-  --rule-text: #9b3a64;
+  --primary-shadow: rgba(0, 174, 189, 0.3);
+  --workout-glow: rgba(255, 20, 147, 0.34);
+  --fat-loss-glow: rgba(255, 105, 180, 0.36);
+  --reset-glow: rgba(64, 224, 208, 0.58);
+  --rule-text: #b80073;
   --test-text: #b55229;
   --segment-bg: rgba(255, 255, 255, 0.62);
-  --segment-active: #088f8f;
+  --segment-active: #40e0d0;
+  --segment-contrast: #063b3b;
+  --workout-detail: #202124;
+  --instruction-text: #202124;
+  --demo-pill-bg: rgba(119, 81, 107, 0.12);
+  --demo-pill-text: #77516b;
+  --exercise-link-hover: #202124;
 }
 
 * {
@@ -237,7 +259,7 @@ p {
 
 .theme-option[aria-pressed="true"] {
   background: var(--segment-active);
-  color: var(--primary-contrast);
+  color: var(--segment-contrast);
   box-shadow: 0 10px 24px var(--primary-shadow);
 }
 
@@ -279,8 +301,8 @@ p {
 .primary-button {
   width: 100%;
   padding: 0 1.2rem;
-  background: var(--ink);
-  color: var(--primary-contrast);
+  background: var(--primary-bg);
+  color: var(--primary-action-contrast);
   box-shadow: 0 16px 34px var(--primary-shadow);
 }
 
@@ -415,7 +437,7 @@ p {
 .sequence-note {
   padding: 1rem;
   border-radius: 1.3rem;
-  color: var(--green);
+  color: var(--instruction-text);
   font-weight: 750;
   line-height: 1.5;
 }
@@ -424,7 +446,7 @@ p {
   margin-top: 0.75rem;
   padding: 1rem;
   border-radius: 1.3rem;
-  color: var(--rule-text);
+  color: var(--instruction-text);
   font-weight: 750;
   line-height: 1.5;
 }
@@ -453,24 +475,24 @@ p {
 
 .exercise-prescription {
   flex: 0 0 auto;
-  color: var(--green);
+  color: var(--workout-detail);
   font-weight: 900;
 }
 
 .exercise-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.45rem;
   text-decoration: none;
 }
 
 .exercise-link span {
-  padding: 0.25rem 0.55rem;
+  padding: 0.17rem 0.42rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: var(--soft-card);
-  color: var(--green);
-  font-size: 0.72rem;
+  background: var(--demo-pill-bg);
+  color: var(--demo-pill-text);
+  font-size: 0.64rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -478,7 +500,7 @@ p {
 
 .exercise-link:hover strong,
 .finisher-link:hover strong {
-  color: var(--green);
+  color: var(--exercise-link-hover);
 }
 
 .finisher-link {
